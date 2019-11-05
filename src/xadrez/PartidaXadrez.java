@@ -2,6 +2,7 @@ package xadrez;
 
 import jogotabuleiro.Tabuleiro;
 import pecaXadrez.Rei;
+import pecaXadrez.Torre;
 
 public class PartidaXadrez {
 	
@@ -36,6 +37,18 @@ public class PartidaXadrez {
 	
 	public void InicioDePartida()
 	{
-		colocarNovaPeca('e', 8 , new Rei(tabuleiro, Cor.PRETA));
+		colocarNovaPeca( 'c' , 1 , new  Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca( 'c' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca ( 'd' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca ( 'e' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca ( 'e' , 1 , new  Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca ( 'd' , 1 , new  Rei (tabuleiro, Cor.BRANCA));
+
+        colocarNovaPeca ( 'c' , 7 , new  Torre (tabuleiro, Cor.PRETA));
+        colocarNovaPeca ( 'c' , 8 , new  Torre (tabuleiro, Cor.PRETA));
+        colocarNovaPeca( 'd' , 7 , new  Torre (tabuleiro, Cor.PRETA ));
+        colocarNovaPeca ( 'e' , 7 , new  Torre (tabuleiro, Cor.PRETA ));
+        colocarNovaPeca ( 'e' , 8 , new  Torre (tabuleiro, Cor.PRETA ));
+        colocarNovaPeca ( 'd' , 8 , new  Rei (tabuleiro, Cor.PRETA ));
 	}
 }
