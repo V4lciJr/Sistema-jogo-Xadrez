@@ -42,6 +42,13 @@ public class PartidaXadrez {
 		return (PecaXadrez)pecaCapturada;
 	}
 	
+	public boolean[][] movimentosPossiveis(PosicaoDoXadrez origem)
+	{
+		Posicao posicao = origem.posicionar();
+		validandoPosicaoInicial(posicao);
+		return tabuleiro.peca(posicao).movimentosPossiveis();
+	}
+	
 	private Peca mover(Posicao origem, Posicao destino)
 	{
 		Peca peca = tabuleiro.removerPeca(origem);
