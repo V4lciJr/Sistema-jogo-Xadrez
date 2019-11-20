@@ -14,10 +14,10 @@ public class Rei extends PecaXadrez{
 	@Override
 	public String toString()
 	{
-		return "R";
+		return "K";
 	}
 	
-	@SuppressWarnings("null")
+	
 	private boolean podeMover(Posicao posicao)
 	{
 		PecaXadrez peca = (PecaXadrez) getTabuleiro().peca(posicao);

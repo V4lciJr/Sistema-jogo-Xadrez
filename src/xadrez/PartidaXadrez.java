@@ -3,6 +3,10 @@ package xadrez;
 import jogotabuleiro.Peca;
 import jogotabuleiro.Posicao;
 import jogotabuleiro.Tabuleiro;
+import pecaXadrez.Bispo;
+import pecaXadrez.Cavalo;
+import pecaXadrez.Peao;
+import pecaXadrez.Rainha;
 import pecaXadrez.Rei;
 import pecaXadrez.Torre;
 
@@ -108,18 +112,27 @@ public class PartidaXadrez {
 	
 	public void InicioDePartida()
 	{
-		colocarNovaPeca( 'c' , 1 , new  Torre (tabuleiro, Cor.BRANCA));
-        colocarNovaPeca( 'c' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
-        colocarNovaPeca ( 'd' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
-        colocarNovaPeca ( 'e' , 2 , new  Torre (tabuleiro, Cor.BRANCA));
-        colocarNovaPeca ( 'e' , 1 , new  Torre (tabuleiro, Cor.BRANCA));
-        colocarNovaPeca ( 'd' , 1 , new  Rei (tabuleiro, Cor.BRANCA));
+		colocarNovaPeca( 'a' , 1 , new Torre (tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('b', 1 , new Cavalo(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('c', 1 , new Bispo(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('d', 1 , new Rainha(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('e', 1 , new Rei(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('f', 1 , new Bispo(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('g', 1 , new Cavalo(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('h', 1 , new Torre(tabuleiro, Cor.BRANCA));
+        for(int i = 0; i < 8; i++)
+        {
+        	colocarNovaPeca((char) ('a' + (char)i) , 2 , new Peao(tabuleiro, Cor.BRANCA));
+        	colocarNovaPeca((char) ('a' + (char)i) , 7 , new Peao(tabuleiro, Cor.PRETA));
+        }
 
-        colocarNovaPeca ( 'c' , 7 , new  Torre (tabuleiro, Cor.PRETA));
-        colocarNovaPeca ( 'c' , 8 , new  Torre (tabuleiro, Cor.PRETA));
-        colocarNovaPeca( 'd' , 7 , new  Torre (tabuleiro, Cor.PRETA ));
-        colocarNovaPeca ( 'e' , 7 , new  Torre (tabuleiro, Cor.PRETA ));
-        colocarNovaPeca ( 'e' , 8 , new  Torre (tabuleiro, Cor.PRETA ));
-        colocarNovaPeca ( 'd' , 8 , new  Rei (tabuleiro, Cor.PRETA ));
+        colocarNovaPeca( 'a' , 8 , new Torre (tabuleiro, Cor.PRETA));
+        colocarNovaPeca('b', 8 , new Cavalo(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('c', 8 , new Bispo(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('d', 8 , new Rainha(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('e', 8 , new Rei(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('f', 8 , new Bispo(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('g', 8 , new Cavalo(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('h', 8 , new Torre(tabuleiro, Cor.PRETA));
 	}
 }
