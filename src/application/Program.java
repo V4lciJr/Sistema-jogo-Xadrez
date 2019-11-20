@@ -21,7 +21,7 @@ public class Program {
 			try
 			{
 				UI.limparTela();
-				UI.imprimeTabuleiro(partida.getPecas());
+				UI.imprimirPartida(partida);
 				System.out.println();
 				System.out.print("Posição de Origem: ");
 				PosicaoDoXadrez origem = UI.lendoAPosicao(tec);
