@@ -84,6 +84,13 @@ public class PartidaXadrez {
 		Peca peca = tabuleiro.removerPeca(origem);
 		Peca pecaCapturada = tabuleiro.removerPeca(destino);
 		tabuleiro.colocarPeca(peca, destino);
+		
+		if(pecaCapturada != null)
+		{
+			pecasNoTabuleiro.remove(pecaCapturada);
+			pecasCapturadas.add(pecaCapturada);
+		}
+		
 		return pecaCapturada;
 	}
 	private void validandoPosicaoInicial(Posicao origem)
